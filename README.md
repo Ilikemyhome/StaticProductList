@@ -6,10 +6,11 @@ A simple React application that displays a list of Starbucks drinks using compon
 ## Project Setup
 This project was created using Vite with the React template.
 Commands Used
-    `npm create vite@latest my-product-list -- --template react`
-    `cd my-product-list`
-    `npm install`
-    `npm run dev`
+
+    npm create vite@latest my-product-list -- --template react
+    cd my-product-list
+    npm install
+    npm run dev
 
 
 
@@ -30,7 +31,8 @@ Each case is rendered inside the ProductList component to demonstrate how the UI
 ### Normal Test Cases
 Normal Case 1 — Pink Drink
 Input:
-    `{ id: 1, name: "Pink Drink", description: "...", price: 5.45 }`
+
+    { id: 1, name: "Pink Drink", description: "...", price: 5.45 }
 
 Expected Behavior:
 - Renders name, description, and price
@@ -39,7 +41,8 @@ Expected Behavior:
 
 Normal Case 2 — Iced Dubai Chocolate Matcha
 Input:
-`{ id: 2, name: "Iced Dubai Chocolate Matcha", description: "...", price: 6.25 }`
+
+    { id: 2, name: "Iced Dubai Chocolate Matcha", description: "...", price: 6.25 }
 
 Expected Behavior:
 - Long name wraps correctly
@@ -48,7 +51,8 @@ Expected Behavior:
 
 Normal Case 3 — Mocha Cookie Crumble Frappuccino
 Input:
-    `{ id: 3, name: "Mocha Cookie Crumble Frappuccino", description: "...", price: 6.75 }`
+
+       { id: 3, name: "Mocha Cookie Crumble Frappuccino", description: "...", price: 6.75 }
 
 Expected Behavior:
 - Renders normally
@@ -58,7 +62,8 @@ Expected Behavior:
 ### Edge Test Cases
 Edge Case 1 — Missing Description
 Input:
-    `{ id: 4, name: "Cold Brew", description: "", price: 4.25 }`
+
+        { id: 4, name: "Cold Brew", description: "", price: 4.25 }
 
 Expected Behavior:
 - Description area appears empty
@@ -67,7 +72,8 @@ Expected Behavior:
 
 Edge Case 2 — Missing Price
 Input:
-    `{ id: 5, name: "Dragon Drink", description: "...", price: null }`
+
+    { id: 5, name: "Dragon Drink", description: "...", price: null }
 
 Expected Behavior:
 - Price displays as "N/A"
@@ -76,13 +82,14 @@ Expected Behavior:
 
 Edge Case 3 — Extremely Long Name
 Input:
-    `
+
+    
         {
             id: 6, name: "Venti Iced Brown Sugar Oatmilk Shaken Espresso With Extra Cinnamon and Light Ice",
             description: "...",
             price: 7.15
         } 
-    `
+    
 Expected Behavior:
 - Long name wraps naturally
 - Layout remains intact
@@ -90,7 +97,8 @@ Expected Behavior:
 
 Safe Price Rendering
 To prevent crashes when price is null, the component uses conditional rendering:
-    `{product.price !== null ? `$${product.price.toFixed(2)}` : "N/A"} `
+
+    {product.price !== null ? `$${product.price.toFixed(2)}` : "N/A"} 
 
 
 This ensures the UI remains stable even with incomplete data.
